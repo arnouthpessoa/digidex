@@ -1,0 +1,302 @@
+{
+  "evolutions": [
+    {
+      "from": "koromon",
+      "to": "agumon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["HP", "MP", "OFF"] }
+        ]
+      }
+    },
+    {
+      "from": "koromon",
+      "to": "gabumon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["DEF", "SPE", "BRA"] }
+        ]
+      }
+    },
+    {
+      "from": "tokomon",
+      "to": "patamon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["HP", "OFF", "BRA"] }
+        ]
+      }
+    },
+    {
+      "from": "tokomon",
+      "to": "biyomon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["MP", "DEF", "SPE"] }
+        ]
+      }
+    },
+    {
+      "from": "tanemon",
+      "to": "palmon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["HP", "OFF", "SPE"] }
+        ]
+      }
+    },
+    {
+      "from": "tanemon",
+      "to": "betamon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["MP", "DEF", "BRA"] }
+        ]
+      }
+    },
+    {
+      "from": "tsunomon",
+      "to": "penguinmon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["MP", "DEF", "BRA"] }
+        ]
+      }
+    },
+    {
+      "from": "tsunomon",
+      "to": "elecmon",
+      "requirements": {
+        "stats": [],
+        "weight": { "min": 10, "max": 15 },
+        "careMistakes": null,
+        "bonus": [
+          { "type": "highestStat", "options": ["HP", "OFF", "SPE"] }
+        ]
+      }
+    },
+
+    { "from": "agumon", "to": "greymon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "OFF", "min": 120 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "agumon", "to": "meramon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+    { "from": "agumon", "to": "tyrannomon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 36, "max": 40 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "agumon", "to": "monochromon", "requirements": { "stats": [{ "stat": "DEF", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "agumon", "to": "centarumon", "requirements": { "stats": [{ "stat": "SPE", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 0, "max": 3 }, { "type": "techs", "min": 30 }] } },
+    { "from": "agumon", "to": "birdramon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "gabumon", "to": "garurumon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "gabumon", "to": "drimogemon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 4 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "gabumon", "to": "unimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "gabumon", "to": "tyrannomon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 36, "max": 40 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "gabumon", "to": "mojyamon", "requirements": { "stats": [{ "stat": "DEF", "min": 120 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 0, "max": 3 }, { "type": "techs", "min": 30 }] } },
+    { "from": "gabumon", "to": "ogremon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 16, "max": 20 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "betamon", "to": "seadramon", "requirements": { "stats": [{ "stat": "SPE", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "betamon", "to": "whamon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "betamon", "to": "coelamon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "OFF", "min": 120 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+    { "from": "betamon", "to": "shellmon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "battles", "min": 0, "max": 3 }, { "type": "techs", "min": 30 }] } },
+    { "from": "betamon", "to": "frigimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "MP", "min": 1200 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "betamon", "to": "devimon", "requirements": { "stats": [{ "stat": "DEF", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "biyomon", "to": "birdramon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "biyomon", "to": "airdramon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "biyomon", "to": "kokatorimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "battles", "min": 16, "max": 19 }, { "type": "techs", "min": 30 }] } },
+    { "from": "biyomon", "to": "unimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "biyomon", "to": "kabuterimon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "OFF", "min": 120 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "biyomon", "to": "meramon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "elecmon", "to": "leomon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+    { "from": "elecmon", "to": "drimogemon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 4 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "elecmon", "to": "monochromon", "requirements": { "stats": [{ "stat": "DEF", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "elecmon", "to": "kokatorimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "battles", "min": 16, "max": 19 }, { "type": "techs", "min": 30 }] } },
+    { "from": "elecmon", "to": "bakemon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 1, "max": 5 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "elecmon", "to": "angemon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "kunemon", "to": "kabuterimon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "OFF", "min": 120 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "kunemon", "to": "kuwagamon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 36, "max": 40 }, "careMistakes": { "operator": ">", "value": 4 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "kunemon", "to": "vegiemon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "kunemon", "to": "airdramon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "kunemon", "to": "shellmon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "battles", "min": 0, "max": 3 }, { "type": "techs", "min": 30 }] } },
+    { "from": "kunemon", "to": "ninjamon", "requirements": { "stats": [{ "stat": "SPE", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "palmon", "to": "ninjamon", "requirements": { "stats": [{ "stat": "SPE", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+    { "from": "palmon", "to": "kuwagamon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 36, "max": 40 }, "careMistakes": { "operator": ">", "value": 4 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "palmon", "to": "vegiemon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "palmon", "to": "ogremon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 16, "max": 20 }, { "type": "techs", "min": 30 }] } },
+    { "from": "palmon", "to": "whamon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "palmon", "to": "greymon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "OFF", "min": 120 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "patamon", "to": "angemon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "patamon", "to": "unimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "patamon", "to": "centarumon", "requirements": { "stats": [{ "stat": "SPE", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 0, "max": 3 }, { "type": "techs", "min": 30 }] } },
+    { "from": "patamon", "to": "leomon", "requirements": { "stats": [{ "stat": "OFF", "min": 120 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+    { "from": "patamon", "to": "bakemon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "DEF", "min": 120 }], "weight": { "min": 1, "max": 5 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 8, "max": 11 }, { "type": "techs", "min": 30 }] } },
+    { "from": "patamon", "to": "devimon", "requirements": { "stats": [{ "stat": "DEF", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "penguinmon", "to": "frigimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "MP", "min": 1200 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "penguinmon", "to": "mojyamon", "requirements": { "stats": [{ "stat": "DEF", "min": 120 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": ">", "value": 2 }, "bonus": [{ "type": "battles", "min": 0, "max": 3 }, { "type": "techs", "min": 30 }] } },
+    { "from": "penguinmon", "to": "garurumon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "SPE", "min": 120 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "discipline", "min": 75 }, { "type": "techs", "min": 30 }] } },
+    { "from": "penguinmon", "to": "coelamon", "requirements": { "stats": [{ "stat": "MP", "min": 1200 }, { "stat": "OFF", "min": 120 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 30 }] } },
+    { "from": "penguinmon", "to": "seadramon", "requirements": { "stats": [{ "stat": "SPE", "min": 120 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 2 }, "bonus": [{ "type": "battles", "min": 4, "max": 7 }, { "type": "techs", "min": 30 }] } },
+    { "from": "penguinmon", "to": "kokatorimon", "requirements": { "stats": [{ "stat": "HP", "min": 1200 }, { "stat": "BRA", "min": 120 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "battles", "min": 16, "max": 19 }, { "type": "techs", "min": 30 }] } },
+
+    { "from": "greymon", "to": "megadramon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "greymon", "to": "metalgreymon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "discipline", "min": 95 }, { "type": "battles", "min": 25, "max": 28 }, { "type": "techs", "min": 35 }] } },
+    { "from": "greymon", "to": "skullgreymon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "greymon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "devimon", "to": "giromon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": ">", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "battles", "min": 32, "max": 35 }, { "type": "techs", "min": 35 }] } },
+    { "from": "devimon", "to": "skullgreymon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "devimon", "to": "megadramon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "devimon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "airdramon", "to": "megadramon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "airdramon", "to": "phoenixmon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 1 }, "bonus": [{ "type": "discipline", "min": 100 }, { "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "airdramon", "to": "piximon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "airdramon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "tyrannomon", "to": "phoenixmon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 1 }, "bonus": [{ "type": "discipline", "min": 100 }, { "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "tyrannomon", "to": "mamemon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "tyrannomon", "to": "skullgreymon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "tyrannomon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "meramon", "to": "andromon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 22, "max": 25 }, { "type": "techs", "min": 35 }] } },
+    { "from": "meramon", "to": "metalgreymon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "discipline", "min": 95 }, { "type": "battles", "min": 25, "max": 28 }, { "type": "techs", "min": 35 }] } },
+    { "from": "meramon", "to": "metalmamemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "meramon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "seadramon", "to": "megadramon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "seadramon", "to": "megaseadramon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "seadramon", "to": "vademon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 24, "max": 28 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "seadramon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "kabuterimon", "to": "hercules-kabuterimon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kabuterimon", "to": "metalmamemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kabuterimon", "to": "vademon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 24, "max": 28 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kabuterimon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "angemon", "to": "andromon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 22, "max": 25 }, { "type": "techs", "min": 35 }] } },
+    { "from": "angemon", "to": "piximon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "angemon", "to": "vademon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 24, "max": 28 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "angemon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "birdramon", "to": "piximon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "birdramon", "to": "phoenixmon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 1 }, "bonus": [{ "type": "discipline", "min": 99 }, { "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "birdramon", "to": "metalgreymon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "discipline", "min": 95 }, { "type": "battles", "min": 25, "max": 28 }, { "type": "techs", "min": 35 }] } },
+    { "from": "birdramon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "garurumon", "to": "skullgreymon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "garurumon", "to": "megaseadramon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "garurumon", "to": "mamemon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "garurumon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "frigimon", "to": "monzaemon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 16, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "frigimon", "to": "mamemon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "frigimon", "to": "andromon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "battles", "min": 22, "max": 25 }, { "type": "techs", "min": 35 }] } },
+    { "from": "frigimon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "whamon", "to": "megaseadramon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "whamon", "to": "mamemon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "whamon", "to": "digitamamon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "whamon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "vegiemon", "to": "piximon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "vegiemon", "to": "hercules-kabuterimon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "vegiemon", "to": "vademon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 24, "max": 28 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "vegiemon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "unimon", "to": "giromon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": ">", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "battles", "min": 32, "max": 35 }, { "type": "techs", "min": 35 }] } },
+    { "from": "unimon", "to": "phoenixmon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 1 }, "bonus": [{ "type": "discipline", "min": 99 }, { "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "unimon", "to": "megadramon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "unimon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "ogremon", "to": "etemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "ogremon", "to": "andromon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 22, "max": 25 }, { "type": "techs", "min": 35 }] } },
+    { "from": "ogremon", "to": "giromon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": ">", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "battles", "min": 32, "max": 35 }, { "type": "techs", "min": 35 }] } },
+    { "from": "ogremon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "shellmon", "to": "digitamamon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "shellmon", "to": "hercules-kabuterimon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "shellmon", "to": "megaseadramon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "shellmon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "centarumon", "to": "andromon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 22, "max": 25 }, { "type": "techs", "min": 35 }] } },
+    { "from": "centarumon", "to": "giromon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": ">", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "battles", "min": 32, "max": 35 }, { "type": "techs", "min": 35 }] } },
+    { "from": "centarumon", "to": "vademon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 24, "max": 28 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "centarumon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "bakemon", "to": "giromon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": ">", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "battles", "min": 32, "max": 35 }, { "type": "techs", "min": 35 }] } },
+    { "from": "bakemon", "to": "skullgreymon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "bakemon", "to": "etemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "bakemon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "drimogemon", "to": "etemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "drimogemon", "to": "metalgreymon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "discipline", "min": 95 }, { "type": "battles", "min": 25, "max": 28 }, { "type": "techs", "min": 35 }] } },
+    { "from": "drimogemon", "to": "mamemon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "drimogemon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "monochromon", "to": "megadramon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "monochromon", "to": "hercules-kabuterimon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "monochromon", "to": "metalgreymon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 41, "max": 45 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "discipline", "min": 95 }, { "type": "battles", "min": 25, "max": 28 }, { "type": "techs", "min": 35 }] } },
+    { "from": "monochromon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "leomon", "to": "andromon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 22, "max": 25 }, { "type": "techs", "min": 35 }] } },
+    { "from": "leomon", "to": "mamemon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "leomon", "to": "metalmamemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "leomon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "coelamon", "to": "megaseadramon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "coelamon", "to": "hercules-kabuterimon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "coelamon", "to": "metalmamemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "coelamon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "kokatorimon", "to": "phoenixmon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "<", "value": 1 }, "bonus": [{ "type": "discipline", "min": 99 }, { "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kokatorimon", "to": "piximon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kokatorimon", "to": "skullgreymon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 26, "max": 30 }, "careMistakes": { "operator": ">", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kokatorimon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "kuwagamon", "to": "vademon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 24, "max": 28 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kuwagamon", "to": "hercules-kabuterimon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 46, "max": 50 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "battles", "min": 17, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kuwagamon", "to": "piximon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "kuwagamon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "mojyamon", "to": "monzaemon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 16, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "mojyamon", "to": "mamemon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 11, "max": 15 }, "careMistakes": { "operator": "<", "value": 7 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "mojyamon", "to": "vademon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 24, "max": 28 }, "careMistakes": { "operator": ">", "value": 3 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "mojyamon", "to": "metaletemon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "ninjamon", "to": "metalmamemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "<", "value": 10 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "ninjamon", "to": "megadramon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "MP", "min": 4000 }, { "stat": "DEF", "min": 400 }], "weight": { "min": 31, "max": 35 }, "careMistakes": { "operator": "<", "value": 3 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "ninjamon", "to": "piximon", "requirements": { "stats": [{ "stat": "MP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 6, "max": 10 }, "careMistakes": { "operator": "<", "value": 5 }, "bonus": [{ "type": "happiness", "min": 90 }, { "type": "techs", "min": 35 }] } },
+    { "from": "ninjamon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "numemon", "to": "monzaemon", "requirements": { "stats": [{ "stat": "OFF", "min": 400 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 16, "max": 20 }, { "type": "techs", "min": 35 }] } },
+    { "from": "numemon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "nanimon", "to": "digitamamon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "DEF", "min": 400 }, { "stat": "SPE", "min": 400 }], "weight": { "min": 16, "max": 20 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 21, "max": 24 }, { "type": "techs", "min": 35 }] } },
+    { "from": "nanimon", "to": "gigadramon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } },
+
+    { "from": "sukamon", "to": "etemon", "requirements": { "stats": [{ "stat": "HP", "min": 4000 }, { "stat": "SPE", "min": 400 }, { "stat": "BRA", "min": 400 }], "weight": { "min": 21, "max": 25 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 12, "max": 15 }, { "type": "techs", "min": 35 }] } },
+    { "from": "sukamon", "to": "panjyamon", "requirements": { "stats": [{ "stat": "HP", "min": 5000 }, { "stat": "MP", "min": 5000 }, { "stat": "BRA", "min": 500 }], "weight": { "min": 51, "max": 55 }, "careMistakes": { "operator": "=", "value": 0 }, "bonus": [{ "type": "battles", "min": 36, "max": 40 }, { "type": "techs", "min": 40 }] } }
+  ]
+}

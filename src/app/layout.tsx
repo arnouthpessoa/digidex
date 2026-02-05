@@ -1,0 +1,61 @@
+import type { Metadata } from "next";
+import { VT323 } from "next/font/google";
+import localFont from "next/font/local";
+import "./globals.css";
+import { CRTOverlay } from "@/components/CRTOverlay";
+import { Header } from "@/components/Header";
+import { StatsTracker } from "@/components/StatsTracker";
+import { TrackerProvider } from "@/context/TrackerContext";
+
+const pixelDigivolve = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Pixel Digivolve.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Pixel Digivolve Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+  ],
+  variable: "--font-pixel",
+  display: "swap",
+});
+
+const vt323 = VT323({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-retro",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "DIGIDEX - Digimon World Evolution Tracker",
+  description: "Track your Digimon evolution requirements for Digimon World (Maeson Hack)",
+  keywords: ["Digimon World", "Evolution", "Tracker", "Maeson Hack", "PS1"],
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${pixelDigivolve.variable} ${vt323.variable}`}>
+      <body className="font-retro antialiased min-h-screen bg-bg-dark text-text-primary">
+        <TrackerProvider>
+          <CRTOverlay />
+          <div className="relative z-10 min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1 pb-20">
+              {children}
+            </main>
+          </div>
+          <StatsTracker />
+        </TrackerProvider>
+      </body>
+    </html>
+  );
+}
