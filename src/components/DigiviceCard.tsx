@@ -4,10 +4,11 @@ import { useRef, useState, useCallback } from "react";
 import type { Digimon } from "@/lib/types";
 
 interface DigiviceCardProps {
-  digimon: Digimon;
+  digimon?: Digimon | null;
+  emptyText?: string;
 }
 
-export function DigiviceCard({ digimon }: DigiviceCardProps) {
+export function DigiviceCard({ digimon, emptyText = "SELECT BELOW" }: DigiviceCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [transform, setTransform] = useState("rotateX(0deg) rotateY(0deg)");
   const [glarePosition, setGlarePosition] = useState({ x: 50, y: 50 });
@@ -113,20 +114,26 @@ export function DigiviceCard({ digimon }: DigiviceCardProps) {
 
           {/* Digimon sprite inside screen */}
           <div className="relative z-10 w-full h-full flex items-center justify-center p-1">
-            {!spriteFailed ? (
-              <img
-                src={digimon.sprite}
-                alt={digimon.name}
-                className="max-w-full max-h-full object-contain image-pixelated"
-                style={{
-                  filter: "drop-shadow(0 0 3px rgba(0,255,136,0.5)) brightness(1.05)",
-                }}
-                onError={() => setSpriteFailed(true)}
-                draggable={false}
-              />
+            {digimon ? (
+              !spriteFailed ? (
+                <img
+                  src={digimon.sprite}
+                  alt={digimon.name}
+                  className="max-w-full max-h-full object-contain image-pixelated"
+                  style={{
+                    filter: "drop-shadow(0 0 3px rgba(0,255,136,0.5)) brightness(1.05)",
+                  }}
+                  onError={() => setSpriteFailed(true)}
+                  draggable={false}
+                />
+              ) : (
+                <span className="font-pixel text-xl text-accent-green uppercase drop-shadow-[0_0_6px_rgba(0,255,136,0.8)]">
+                  {digimon.name.slice(0, 3)}
+                </span>
+              )
             ) : (
-              <span className="font-pixel text-xl text-accent-green uppercase drop-shadow-[0_0_6px_rgba(0,255,136,0.8)]">
-                {digimon.name.slice(0, 3)}
+              <span className="font-pixel text-[10px] text-accent-green uppercase drop-shadow-[0_0_6px_rgba(0,255,136,0.8)] animate-pulse text-center leading-tight">
+                {emptyText}
               </span>
             )}
           </div>

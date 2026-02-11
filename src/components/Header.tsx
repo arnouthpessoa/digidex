@@ -16,7 +16,7 @@ export function Header() {
         </Link>
 
         <div className="font-retro text-text-secondary text-sm">
-          Maeson Hack v1.09a
+          Maeson Patch v1.09a
         </div>
       </div>
     </header>

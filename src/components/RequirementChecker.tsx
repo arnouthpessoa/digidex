@@ -83,21 +83,44 @@ export function RequirementChecker({ evolution, fromId, toId }: RequirementCheck
   const anyBonusMet = req.bonus.length === 0 || req.bonus.some((b) => isBonusMet(b) || isManuallyChecked(checkKey(`bonus_${b.type}`)));
 
   const totalCategories = 4;
+  const requiredCategories = 3; // Game requires 3 of 4 categories to evolve
   const metCategories = [statsAllMet, weightMet, careMistakesMet, anyBonusMet].filter(Boolean).length;
+  const canEvolve = metCategories >= requiredCategories;
+
+  // Progress messages based on met categories
+  const progressMessage = [
+    "NOT EVEN CLOSE...",
+    "KEEP TRAINING, ROOKIE!",
+    "GETTING WARMER...",
+    "DIGIVOLUTION READY!",
+    "ABSOLUTE PERFECTION!",
+  ][metCategories];
 
   return (
     <div className="space-y-3">
-      {/* Progress */}
+      {/* Progress Message */}
+      <div className="text-center mb-2">
+        <motion.span
+          key={metCategories}
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className={`font-pixel text-xs ${canEvolve ? "text-accent-green crt-glow" : "text-text-secondary"}`}
+        >
+          {progressMessage}
+        </motion.span>
+      </div>
+
+      {/* Progress Bar */}
       <div className="flex items-center gap-3 mb-4">
         <div className="flex-1 h-3 bg-bg-panel pixel-border-thin overflow-hidden">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: `${(metCategories / totalCategories) * 100}%` }}
-            className={`h-full ${metCategories === totalCategories ? "bg-accent-green" : "bg-accent-blue"}`}
+            className={`h-full ${canEvolve ? "bg-accent-green" : "bg-accent-blue"}`}
           />
         </div>
-        <span className={`font-pixel text-xs ${metCategories === totalCategories ? "text-accent-green" : "text-text-primary"}`}>
-          {metCategories}/{totalCategories}
+        <span className={`font-pixel text-xs ${canEvolve ? "text-accent-green" : "text-text-primary"}`}>
+          {metCategories}/{totalCategories} {canEvolve && "✓"}
         </span>
       </div>
 

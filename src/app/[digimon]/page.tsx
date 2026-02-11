@@ -9,14 +9,17 @@ import { STAGE_NAMES, STAGE_COLORS } from "@/lib/constants";
 import { RequirementChecker } from "@/components/RequirementChecker";
 import { DigimonSprite } from "@/components/DigimonSprite";
 import { DigiviceCard } from "@/components/DigiviceCard";
+import { useTracker } from "@/context/TrackerContext";
 import { notFound } from "next/navigation";
 
 export default function DigimonPage() {
   const params = useParams();
   const digimonId = params.digimon as string;
   const [expandedEvolution, setExpandedEvolution] = useState<string | null>(null);
+  const { tracker, setCurrentDigimon } = useTracker();
 
   const digimon = getDigimonById(digimonId);
+  const isCurrentDigimon = tracker.currentDigimonId === digimonId;
 
   if (!digimon) {
     notFound();
@@ -51,6 +54,20 @@ export default function DigimonPage() {
             {STAGE_NAMES[digimon.stage]}
           </p>
         </div>
+
+        {/* Set as Current Digimon Button */}
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={() => setCurrentDigimon(isCurrentDigimon ? null : digimonId)}
+          className={`mt-4 px-6 py-2 font-pixel text-xs transition-colors ${
+            isCurrentDigimon
+              ? "bg-accent-green/20 text-accent-green border-2 border-accent-green hover:bg-accent-red/20 hover:text-accent-red hover:border-accent-red"
+              : "bg-bg-panel text-text-primary border-2 border-border-pixel hover:border-accent-green hover:text-accent-green"
+          }`}
+        >
+          {isCurrentDigimon ? "✓ CURRENT DIGIMON" : "SET AS MY DIGIMON"}
+        </motion.button>
       </motion.div>
 
       {/* Evolves From */}
@@ -129,14 +146,21 @@ export default function DigimonPage() {
                       <p className={`font-retro text-sm ${STAGE_COLORS[toDigimon.stage]}`}>
                         {STAGE_NAMES[toDigimon.stage]}
                       </p>
+                      <Link
+                        href={`/${evo.to}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-block mt-1"
+                      >
+                        <span className="font-pixel text-[10px] text-accent-blue hover:text-accent-green">
+                          VIEW {toDigimon.name.toUpperCase()} →
+                        </span>
+                      </Link>
                     </div>
 
-                    <motion.span
-                      animate={{ rotate: isExpanded ? 180 : 0 }}
-                      className="font-pixel text-accent-green text-lg"
-                    >
-                      ▼
-                    </motion.span>
+                    {/* Pixelated chevron */}
+                    <span className="font-pixel text-accent-green text-xs">
+                      {isExpanded ? "▲" : "▼"}
+                    </span>
                   </button>
 
                   {/* Expanded Requirements */}
@@ -147,25 +171,11 @@ export default function DigimonPage() {
                       exit={{ height: 0, opacity: 0 }}
                       className="border-t border-border-pixel p-4"
                     >
-                      <div className="flex gap-4">
-                        {/* Link to target */}
-                        <Link href={`/${evo.to}`} className="flex-shrink-0">
-                          <motion.span
-                            whileHover={{ scale: 1.05 }}
-                            className="font-pixel text-[10px] text-accent-blue hover:text-accent-green"
-                          >
-                            VIEW {toDigimon.name.toUpperCase()} →
-                          </motion.span>
-                        </Link>
-                      </div>
-
-                      <div className="mt-4">
-                        <RequirementChecker
-                          evolution={evo}
-                          fromId={digimonId}
-                          toId={evo.to}
-                        />
-                      </div>
+                      <RequirementChecker
+                        evolution={evo}
+                        fromId={digimonId}
+                        toId={evo.to}
+                      />
                     </motion.div>
                   )}
                 </motion.div>

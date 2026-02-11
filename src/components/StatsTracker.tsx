@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { useTracker } from "@/context/TrackerContext";
+import { getDigimonById } from "@/data";
 import type { DigimonStats } from "@/lib/tracker-types";
 
 const STAT_FIELDS: { key: keyof DigimonStats; label: string; step: number }[] = [
@@ -23,6 +24,9 @@ const STAT_FIELDS: { key: keyof DigimonStats; label: string; step: number }[] = 
 export function StatsTracker() {
   const [isOpen, setIsOpen] = useState(false);
   const { tracker, updateStat, incrementStat, decrementStat, resetStats } = useTracker();
+  const currentDigimon = tracker.currentDigimonId
+    ? getDigimonById(tracker.currentDigimonId)
+    : null;
 
   return (
     <div className="fixed bottom-4 right-4 z-40">
@@ -46,7 +50,14 @@ export function StatsTracker() {
             className="absolute bottom-14 right-0 w-80 max-h-[70vh] overflow-y-auto pixel-border bg-bg-panel p-4"
           >
             <div className="flex justify-between items-center mb-4">
-              <h3 className="font-pixel text-xs text-accent-green">MY DIGIMON</h3>
+              <div>
+                <h3 className="font-pixel text-xs text-accent-green">MY STATS</h3>
+                {currentDigimon && (
+                  <p className="font-pixel text-[10px] text-text-primary mt-1">
+                    {currentDigimon.name.toUpperCase()}
+                  </p>
+                )}
+              </div>
               <button
                 onClick={resetStats}
                 className="font-retro text-sm text-text-secondary hover:text-accent-red"
@@ -73,7 +84,7 @@ export function StatsTracker() {
                     type="number"
                     value={tracker.stats[key]}
                     onChange={(e) => updateStat(key, parseInt(e.target.value) || 0)}
-                    className="w-16 px-2 py-1 font-retro text-center bg-bg-card text-text-primary pixel-border-thin focus:outline-none focus:border-accent-green"
+                    className="w-20 px-1 py-1 font-retro text-sm text-center bg-bg-card text-text-primary pixel-border-thin focus:outline-none focus:border-accent-green"
                   />
 
                   <button

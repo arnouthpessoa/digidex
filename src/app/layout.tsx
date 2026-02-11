@@ -33,8 +33,8 @@ const vt323 = VT323({
 
 export const metadata: Metadata = {
   title: "DIGIDEX - Digimon World Evolution Tracker",
-  description: "Track your Digimon evolution requirements for Digimon World (Maeson Hack)",
-  keywords: ["Digimon World", "Evolution", "Tracker", "Maeson Hack", "PS1"],
+  description: "Track your Digimon evolution requirements for Digimon World (Maeson Patch)",
+  keywords: ["Digimon World", "Evolution", "Tracker", "Maeson Patch", "PS1"],
 };
 
 export default function RootLayout({
