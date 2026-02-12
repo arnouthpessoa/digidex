@@ -52,6 +52,17 @@ export default function RootLayout({
             <main className="flex-1 pb-20">
               {children}
             </main>
+            <footer className="text-center py-4 text-text-secondary text-sm">
+              Created by{" "}
+              <a
+                href="https://www.linkedin.com/in/arnouthpessoa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent-green hover:underline"
+              >
+                @arnouthpessoa
+              </a>
+            </footer>
           </div>
           <StatsTracker />
         </TrackerProvider>

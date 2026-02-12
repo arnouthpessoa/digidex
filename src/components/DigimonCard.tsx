@@ -8,20 +8,15 @@ import { DigimonSprite } from "@/components/DigimonSprite";
 
 interface DigimonCardProps {
   digimon: Digimon;
-  index?: number;
 }
 
-export function DigimonCard({ digimon, index = 0 }: DigimonCardProps) {
+export function DigimonCard({ digimon }: DigimonCardProps) {
   return (
     <Link href={`/${digimon.id}`}>
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          transition: { delay: index * 0.03, duration: 0.3 }
-        }}
-        className="pixel-border bg-bg-card p-3 cursor-pointer transition-all duration-200 hover:scale-105 hover:shadow-[0_0_20px_rgba(0,255,136,0.4)] active:scale-[0.98]"
+        whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+        whileTap={{ scale: 0.98, transition: { duration: 0.1 } }}
+        className="pixel-border bg-bg-card p-3 cursor-pointer transition-shadow duration-200 hover:shadow-[0_0_20px_rgba(0,255,136,0.4)]"
       >
         {/* Sprite */}
         <div className="aspect-square mb-2">
