@@ -1,23 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useTracker } from "@/context/TrackerContext";
 
-interface CRTOverlayProps {
-  enabled?: boolean;
-}
+export function CRTOverlay() {
+  const { crtEnabled } = useTracker();
 
-export function CRTOverlay({ enabled = true }: CRTOverlayProps) {
-  const [isEnabled, setIsEnabled] = useState(enabled);
-
-  useEffect(() => {
-    // Check localStorage for user preference
-    const stored = localStorage.getItem("digidex_crt_enabled");
-    if (stored !== null) {
-      setIsEnabled(stored === "true");
-    }
-  }, []);
-
-  if (!isEnabled) return null;
+  if (!crtEnabled) return null;
 
   return (
     <div

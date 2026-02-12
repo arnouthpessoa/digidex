@@ -14,12 +14,19 @@ interface TrackerContextType {
   toggleManualCheck: (key: string) => void;
   isManuallyChecked: (key: string) => boolean;
   resetStats: () => void;
+  crtEnabled: boolean;
+  toggleCRT: () => void;
 }
 
 const TrackerContext = createContext<TrackerContextType | null>(null);
 
 export function TrackerProvider({ children }: { children: ReactNode }) {
   const [tracker, setTracker] = useLocalStorage<TrackerData>("digidex_tracker", DEFAULT_TRACKER);
+  const [crtEnabled, setCrtEnabled] = useLocalStorage<boolean>("digidex_crt_enabled", true);
+
+  const toggleCRT = () => {
+    setCrtEnabled((prev) => !prev);
+  };
 
   const setCurrentDigimon = (id: string | null) => {
     setTracker((prev) => ({ ...prev, currentDigimonId: id }));
@@ -78,6 +85,8 @@ export function TrackerProvider({ children }: { children: ReactNode }) {
         toggleManualCheck,
         isManuallyChecked,
         resetStats,
+        crtEnabled,
+        toggleCRT,
       }}
     >
       {children}

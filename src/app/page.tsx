@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { DigimonGrid } from "@/components/DigimonGrid";
 import { DigiviceCard } from "@/components/DigiviceCard";
+import { PageTransition } from "@/components/PageTransition";
 import { useTracker } from "@/context/TrackerContext";
 import { getDigimonById } from "@/data";
 
@@ -14,7 +15,8 @@ export default function Home() {
     : null;
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <PageTransition>
+      <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -55,6 +57,7 @@ export default function Home() {
       >
         <DigimonGrid />
       </motion.div>
-    </div>
+      </div>
+    </PageTransition>
   );
 }

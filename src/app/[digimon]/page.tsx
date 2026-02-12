@@ -9,6 +9,7 @@ import { STAGE_NAMES, STAGE_COLORS } from "@/lib/constants";
 import { RequirementChecker } from "@/components/RequirementChecker";
 import { DigimonSprite } from "@/components/DigimonSprite";
 import { DigiviceCard } from "@/components/DigiviceCard";
+import { PageTransition } from "@/components/PageTransition";
 import { useTracker } from "@/context/TrackerContext";
 import { notFound } from "next/navigation";
 
@@ -29,7 +30,8 @@ export default function DigimonPage() {
   const evolvesFrom = getEvolutionsTo(digimonId);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <PageTransition>
+      <div className="max-w-4xl mx-auto px-4 py-8">
       {/* Back button */}
       <Link href="/">
         <motion.button
@@ -52,6 +54,9 @@ export default function DigimonPage() {
           <h1 className="font-pixel text-xl text-text-primary mb-2">{digimon.name}</h1>
           <p className={`font-retro text-lg ${STAGE_COLORS[digimon.stage]}`}>
             {STAGE_NAMES[digimon.stage]}
+            {evolvesTo.length === 0 && (digimon.stage === "ultimate" || digimon.stage === "special") && (
+              <span className="text-text-secondary"> (Final Form)</span>
+            )}
           </p>
         </div>
 
@@ -78,7 +83,7 @@ export default function DigimonPage() {
           transition={{ delay: 0.2 }}
           className="mb-8"
         >
-          <h2 className="font-pixel text-sm text-text-secondary mb-4">EVOLVES FROM</h2>
+          <h2 className="font-pixel text-sm text-text-secondary mb-4"><span className="inline-block -translate-y-px">◀◀</span> EVOLVES FROM</h2>
           <div className="flex flex-wrap gap-3">
             {evolvesFrom.map((evo) => {
               const fromDigimon = getDigimonById(evo.from);
@@ -110,7 +115,7 @@ export default function DigimonPage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <h2 className="font-pixel text-sm text-text-secondary mb-4">CAN EVOLVE INTO</h2>
+          <h2 className="font-pixel text-sm text-text-secondary mb-4"><span className="inline-block -translate-y-px">▶▶</span> CAN EVOLVE INTO</h2>
           <p className="font-retro text-sm text-text-secondary mb-4">
             Click a card to see requirements. Use the MY STATS button to track your progress.
           </p>
@@ -151,7 +156,7 @@ export default function DigimonPage() {
                         onClick={(e) => e.stopPropagation()}
                         className="inline-block mt-1"
                       >
-                        <span className="font-pixel text-[10px] text-accent-blue hover:text-accent-green">
+                        <span className="font-pixel text-[10px] text-accent-green hover:text-accent-blue">
                           VIEW {toDigimon.name.toUpperCase()} →
                         </span>
                       </Link>
@@ -197,6 +202,7 @@ export default function DigimonPage() {
           </p>
         </motion.div>
       )}
-    </div>
+      </div>
+    </PageTransition>
   );
 }
