@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { VT323 } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
+import { CircuitBackground } from "@/components/CircuitBackground";
 import { CRTOverlay } from "@/components/CRTOverlay";
 import { Header } from "@/components/Header";
 import { StatsTracker } from "@/components/StatsTracker";
@@ -46,6 +47,7 @@ export default function RootLayout({
     <html lang="en" className={`${pixelDigivolve.variable} ${vt323.variable}`}>
       <body className="font-retro antialiased min-h-screen bg-bg-dark text-text-primary">
         <TrackerProvider>
+          <CircuitBackground />
           <CRTOverlay />
           <div className="relative z-10 min-h-screen flex flex-col">
             <Header />
